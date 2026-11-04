@@ -1,0 +1,53 @@
+﻿<Application x:Class="StudentFilesApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:StudentFilesApp"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+            <!-- Цветовая палитра -->
+            <SolidColorBrush x:Key="DarkestBlue" Color="#0D1B2A"/>
+            <SolidColorBrush x:Key="DarkBlue" Color="#1B263B"/>
+            <SolidColorBrush x:Key="MidBlue" Color="#415A77"/>
+            <SolidColorBrush x:Key="LightBlue" Color="#778DA9"/>
+            <SolidColorBrush x:Key="BgGray" Color="#E0E1DD"/>
+
+            <!-- Акцентные цвета для статусов -->
+            <SolidColorBrush x:Key="StatusGreen" Color="#2E7D32"/>
+            <!-- Обучается -->
+            <SolidColorBrush x:Key="StatusYellow" Color="#F39C12"/>
+            <!-- Академ -->
+            <SolidColorBrush x:Key="StatusRed" Color="#C62828"/>
+            <!-- Отчислен -->
+
+            <!-- Стиль для кнопок -->
+            <Style TargetType="Button">
+                <Setter Property="Background" Value="{StaticResource MidBlue}"/>
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Padding" Value="10,5"/>
+                <Setter Property="Cursor" Value="Hand"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}" CornerRadius="4" Padding="{TemplateBinding Padding}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="{StaticResource DarkBlue}"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <!-- Стиль для TextBox -->
+            <Style TargetType="TextBox">
+                <Setter Property="BorderBrush" Value="{StaticResource LightBlue}"/>
+                <Setter Property="Padding" Value="5"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+            </Style>
+       
+    </Application.Resources>
+</Application>

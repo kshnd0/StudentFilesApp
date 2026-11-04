@@ -1,0 +1,33 @@
+﻿<Window x:Class="StudentFilesApp.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Вход в систему" Height="450" Width="380"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize" 
+        Background="{StaticResource BgGray}">
+
+    <!-- Тень для окна -->
+    <Border Margin="20" Background="White" CornerRadius="10" Padding="30" >
+        <StackPanel VerticalAlignment="Center">
+
+            <!-- Логотип / Заголовок -->
+            <TextBlock Text="ЛИЧНЫЕ ДЕЛА" FontSize="26" FontWeight="Bold" 
+                       HorizontalAlignment="Center" Foreground="{StaticResource DarkestBlue}"/>
+            <TextBlock Text="Автоматизированая система учета" FontSize="12" HorizontalAlignment="Center" 
+                       Foreground="{StaticResource LightBlue}" Margin="0,5,0,30"/>
+
+            <!-- Форма -->
+            <TextBlock Text="Логин" Foreground="{StaticResource MidBlue}" Margin="0,0,0,5"/>
+            <TextBox Height="35" Margin="0,0,0,15"/>
+
+            <TextBlock Text="Пароль" Foreground="{StaticResource MidBlue}" Margin="0,0,0,5"/>
+            <PasswordBox Height="35" Margin="0,0,0,30" BorderBrush="{StaticResource LightBlue}" Padding="5"/>
+
+            <!-- Кнопка (использует глобальный стиль) -->
+            <Button Content="Войти в систему" Height="45" FontSize="16" 
+                    Background="{StaticResource DarkBlue}"/>
+
+            <TextBlock Text="© 2026 Курсовая" HorizontalAlignment="Center" Margin="0,20,0,0" 
+                       FontSize="11" Foreground="{StaticResource LightBlue}"/>
+        </StackPanel>
+    </Border>
+</Window>
