@@ -24,7 +24,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Templates\" />
+    <None Update="Templates\Napravlenie_Na_Dolg.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Templates\Spravka_Ob_Obuchenii.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

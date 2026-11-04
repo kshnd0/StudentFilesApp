@@ -7,57 +7,52 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"/>
-            <!-- Меню -->
             <ColumnDefinition Width="*"/>
-            <!-- Контент -->
         </Grid.ColumnDefinitions>
 
-        <!-- Боковое меню -->
+        
         <Border Grid.Column="0" Background="{StaticResource DarkestBlue}">
             <StackPanel>
-                <!-- Профиль пользователя -->
+                
                 <Border BorderBrush="{StaticResource DarkBlue}" BorderThickness="0,0,0,1" Padding="20">
                     <StackPanel>
-                        <TextBlock Text="Иванов И.И." Foreground="White" FontWeight="Bold" FontSize="16"/>
-                        <TextBlock Text="Сотрудник деканата" Foreground="{StaticResource LightBlue}" FontSize="12"/>
+                        <TextBlock x:Name="TxtUserName" Text="Иванов И.И." Foreground="White" FontWeight="Bold" FontSize="16"/>
+                        <TextBlock x:Name="TxtUserRole" Text="Сотрудник деканата" Foreground="{StaticResource LightBlue}" FontSize="12"/>
                     </StackPanel>
                 </Border>
 
-                <!-- Навигация -->
-                <Button Content="🏠 Главная" Background="Transparent" Foreground="White" 
-                        HorizontalContentAlignment="Left" Padding="20,15" BorderThickness="0"
-                        Click="BtnHome_Click"/>
 
-                <Button Content="👥 Студенты" Background="{StaticResource DarkBlue}" Foreground="White" 
+                <Button x:Name="BtnHome" Content="🏠 Главная" Background="Transparent" Foreground="White" 
+        HorizontalContentAlignment="Left" Padding="20,15" BorderThickness="0"
+        Click="BtnHome_Click"/>
+
+                <Button x:Name="BtnStudents" Content="👥 Студенты" Background="Transparent" Foreground="White" 
         HorizontalContentAlignment="Left" Padding="20,15" BorderThickness="0"
         Click="BtnStudents_Click"/>
 
-                <!-- Кнопка видна только Админу -->
                 <Button Content="⚙ Пользователи" Background="Transparent" Foreground="{StaticResource LightBlue}" 
-                        HorizontalContentAlignment="Left" Padding="20,15" BorderThickness="0"/>
+        HorizontalContentAlignment="Left" Padding="20,15" BorderThickness="0"/>
+                
             </StackPanel>
         </Border>
 
-        <!-- Правая часть -->
+       
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="70"/>
-                <!-- Верхняя панель -->
                 <RowDefinition Height="*"/>
-                <!-- Рабочая зона -->
             </Grid.RowDefinitions>
 
-            <!-- Верхняя панель -->
+            
             <Border Grid.Row="0" Background="White" BorderBrush="{StaticResource BgGray}" BorderThickness="0,0,0,2" Padding="20,0">
                 <Grid>
                     <TextBlock Text="Добро пожаловать!" FontSize="20" VerticalAlignment="Center" 
                                Foreground="{StaticResource DarkestBlue}" FontWeight="SemiBold"/>
-                    <TextBlock Text="Дата: 18.10.2026" HorizontalAlignment="Right" VerticalAlignment="Center" 
-                               Foreground="{StaticResource LightBlue}"/>
+                    <TextBlock x:Name="TxtCurrentDate" Text="Дата: 18.10.2026" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="{StaticResource LightBlue}"/>
                 </Grid>
             </Border>
 
-            <!-- Сюда подгружаются страницы -->
+           
             <ContentControl Grid.Row="1" x:Name="MainContent" Margin="20"/>
         </Grid>
     </Grid>

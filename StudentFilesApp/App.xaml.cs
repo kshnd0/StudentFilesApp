@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace StudentFilesApp
+namespace StudentFilesApp.Templates
 {
     /// <summary>
     /// Interaction logic for App.xaml

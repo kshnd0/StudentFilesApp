@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="StudentFilesApp.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Панель управления" FontSize="28" FontWeight="Bold" Foreground="{StaticResource DarkestBlue}" Margin="0,0,0,20"/>
+
+       
+        <UniformGrid Grid.Row="1" Columns="2" Rows="2">
+
+            
+            <Border Background="White" CornerRadius="8" Margin="10" Padding="20" BorderBrush="{StaticResource BgGray}" BorderThickness="1">
+                <StackPanel>
+                    <TextBlock Text="Всего студентов" Foreground="{StaticResource LightBlue}" FontSize="16"/>
+                    <TextBlock x:Name="TxtTotalStudents" Text="0" FontSize="36" FontWeight="Bold" Foreground="{StaticResource DarkBlue}" Margin="0,10,0,0"/>
+                </StackPanel>
+            </Border>
+
+           
+            <Border Background="White" CornerRadius="8" Margin="10" Padding="20" BorderBrush="{StaticResource BgGray}" BorderThickness="1">
+                <StackPanel>
+                    <TextBlock Text="Обучаются (активные)" Foreground="{StaticResource LightBlue}" FontSize="16"/>
+                    <TextBlock x:Name="TxtActiveStudents" Text="0" FontSize="36" FontWeight="Bold" Foreground="{StaticResource StatusGreen}" Margin="0,10,0,0"/>
+                </StackPanel>
+            </Border>
+
+            
+            <Border Background="White" CornerRadius="8" Margin="10" Padding="20" BorderBrush="{StaticResource BgGray}" BorderThickness="1">
+                <StackPanel>
+                    <TextBlock Text="В академическом отпуске" Foreground="{StaticResource LightBlue}" FontSize="16"/>
+                    <TextBlock x:Name="TxtAкадем" Text="0" FontSize="36" FontWeight="Bold" Foreground="{StaticResource StatusYellow}" Margin="0,10,0,0"/>
+                </StackPanel>
+            </Border>
+
+           
+            <Border Background="White" CornerRadius="8" Margin="10" Padding="20" BorderBrush="{StaticResource BgGray}" BorderThickness="1">
+                <StackPanel>
+                    <TextBlock Text="Отчислены" Foreground="{StaticResource LightBlue}" FontSize="16"/>
+                    <TextBlock x:Name="TxtExpelled" Text="0" FontSize="36" FontWeight="Bold" Foreground="{StaticResource StatusRed}" Margin="0,10,0,0"/>
+                </StackPanel>
+            </Border>
+
+        </UniformGrid>
+    </Grid>
+</UserControl>
