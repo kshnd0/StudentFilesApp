@@ -53,15 +53,25 @@ namespace StudentFilesApp
             TxtEmail.Text = string.IsNullOrEmpty(_currentStudent.Email) ? "Не указан" : _currentStudent.Email;
             TxtAddress.Text = string.IsNullOrEmpty(_currentStudent.Address) ? "Не указан" : _currentStudent.Address;
 
-            // Разграничение прав
-            if (_currentUser.RoleId == 2)
+
+            if (_currentUser.RoleId == 2) 
             {
                 TxtFullName.IsReadOnly = true;
                 TxtFullName.Background = System.Windows.Media.Brushes.Transparent;
                 TxtFullName.BorderThickness = new Thickness(0);
                 DpBirthDate.IsEnabled = false;
                 CmbGender.IsEnabled = false;
-                BtnSaveChanges.Visibility = Visibility.Collapsed; // Скрываем кнопку для кафедры
+                BtnSaveChanges.Visibility = Visibility.Collapsed;
+            }
+            else 
+            {
+                TxtFullName.IsReadOnly = false;
+                TxtFullName.Background = System.Windows.Media.Brushes.White;
+                TxtFullName.BorderThickness = new Thickness(1);
+                TxtFullName.BorderBrush = System.Windows.Media.Brushes.LightGray;
+                DpBirthDate.IsEnabled = true;
+                CmbGender.IsEnabled = true;
+                BtnSaveChanges.Visibility = Visibility.Visible;
             }
 
             LoadTabsData();
